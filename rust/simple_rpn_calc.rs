@@ -8,9 +8,7 @@ fn main() {
         .map(|x| x.to_string())
         .collect();
 
-    let _operator = keys.pop().unwrap();
-    let operator = _operator
-      .as_str();
+    let operator = keys.pop().unwrap();
     
     let mut operands: Vec<i64> = keys
       .iter()
@@ -22,7 +20,7 @@ fn main() {
     operands.remove(0);
 
     for op in operands.iter() {
-      match operator {
+      match operator.as_str() {
         "+" => {
           result += op;
         }
